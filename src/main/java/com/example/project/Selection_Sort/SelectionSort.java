@@ -47,8 +47,8 @@ public class SelectionSort {
             while (fileScanner.hasNext()) {
                 String term = fileScanner.next();
                 wordArray.add(term);
-                fileScanner.close();
             }
+            fileScanner.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
