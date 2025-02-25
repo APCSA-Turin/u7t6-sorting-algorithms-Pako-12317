@@ -31,6 +31,7 @@ public class InsertionSort {
                 String word = input.next();
                 wordList.add(word);
             }
+            input.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
