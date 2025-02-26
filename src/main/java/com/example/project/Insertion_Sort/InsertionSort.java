@@ -57,4 +57,30 @@ public class InsertionSort {
     }
 
 
+    public static ArrayList<String> insertionSortWordList(ArrayList<String> words) {
+        for (int i = 1; i < words.size(); i++) {
+            String currentWord = words.get(i);
+            int j = i - 1;
+            while (j >= 0 && words.get(j).compareTo(currentWord) > 0) {
+                words.set(j + 1, words.get(j));
+                j--;
+            }
+            words.set(j + 1, currentWord);
+        }
+        return words;
+    }
+
+    public static void selectionSortWordList(ArrayList<String> words) {
+        for (int i = 0; i < words.size() - 1; i++) {
+            int smallestIdx = i;
+            for (int j = i + 1; j < words.size(); j++) {
+                if (words.get(j).compareTo(words.get(smallestIdx)) < 0) {
+                    smallestIdx = j;
+                }
+            }
+            String swap = words.get(i);
+            words.set(i, words.get(smallestIdx));
+            words.set(smallestIdx, swap);
+        }
+    }
 }
