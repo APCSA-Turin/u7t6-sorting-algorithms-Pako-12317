@@ -8,6 +8,7 @@ public class InsertionSort {
 
     // PART A. implementing insertion sort
     public static int[] insertionSort(int[] elements) {
+<<<<<<< HEAD
         int count = 0;
         for (int i = 1; i < elements.length; i++) {
             int currentElement = elements[i];
@@ -39,10 +40,19 @@ public class InsertionSort {
             elements[smallestIdx] = swap;
         }
         System.out.println(count);
+=======
+        return elements;
+    }
+
+   
+    public static void selectionSort(int[] elements) {
+        
+>>>>>>> upstream/main
     }
 
     // PART B. sorting a 1000-word list
     public static ArrayList<String> insertionSortWordList(ArrayList<String> words) {
+<<<<<<< HEAD
         int totalIterations = 0;
         for (int i = 1; i < words.size(); i++) {
             String currentWord = words.get(i);
@@ -73,6 +83,12 @@ public class InsertionSort {
             words.set(smallestIdx, swap);
         }
         System.out.println("Selection Sort: Total iterations = " + totalIterations);
+=======
+        return words;
+    }
+
+    public static void selectionSortWordList(ArrayList<String> words) {
+>>>>>>> upstream/main
     }
 
     public static ArrayList<String> loadWordsInto(ArrayList<String> wordList) {
@@ -82,12 +98,20 @@ public class InsertionSort {
                 String word = input.next();
                 wordList.add(word);
             }
+<<<<<<< HEAD
             input.close();
+=======
+>>>>>>> upstream/main
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
         return wordList;
     }
 
+<<<<<<< HEAD
 
 }
+=======
+   
+}
+>>>>>>> upstream/main
